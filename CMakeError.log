@@ -1,0 +1,311 @@
+Looking for a Fortran compiler failed with the following output:
+-- The Fortran compiler identification is unknown
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_Fortran_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "FC" or the CMake cache entry CMAKE_Fortran_COMPILER to the full
+  path to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CheckFortran/CMakeFiles/CMakeOutput.log".
+See also "/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CheckFortran/CMakeFiles/CMakeError.log".
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9c193/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9c193.dir/build.make CMakeFiles/cmTC_9c193.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9c193.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -O3 -fPIC      -o CMakeFiles/cmTC_9c193.dir/CheckSymbolExists.c.o   -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9c193
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c193.dir/link.txt --verbose=1
+/usr/bin/gcc -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -O3 -fPIC      -Wl,-lc  -Wl,-lc     -rdynamic CMakeFiles/cmTC_9c193.dir/CheckSymbolExists.c.o  -o cmTC_9c193 
+CMakeFiles/cmTC_9c193.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text.startup+0x3): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9c193.dir/build.make:97: recipe for target 'cmTC_9c193' failed
+make[1]: *** [cmTC_9c193] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9c193/fast' failed
+make: *** [cmTC_9c193/fast] Error 2
+
+File /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a8a49/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a8a49.dir/build.make CMakeFiles/cmTC_a8a49.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a8a49.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -O3 -fPIC   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a8a49.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a8a49
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8a49.dir/link.txt --verbose=1
+/usr/bin/gcc -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -O3 -fPIC   -DCHECK_FUNCTION_EXISTS=pthread_create   -Wl,-lc  -Wl,-lc     -rdynamic CMakeFiles/cmTC_a8a49.dir/CheckFunctionExists.c.o  -o cmTC_a8a49 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a8a49.dir/build.make:97: recipe for target 'cmTC_a8a49' failed
+make[1]: *** [cmTC_a8a49] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a8a49/fast' failed
+make: *** [cmTC_a8a49/fast] Error 2
+
+
+Checking whether C++ compiler has '__int64' failed to compile with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3d157/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3d157.dir/build.make CMakeFiles/cmTC_3d157.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3d157.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/g++  -DTEST_KWSYS_CXX_HAS___INT64  -std=c++11 -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas -O3 -DNoRepository -ftemplate-depth-100 -fPIC      -o CMakeFiles/cmTC_3d157.dir/kwsysPlatformTestsCXX.cxx.o -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:24:1: error: ‘__int64’ does not name a type; did you mean ‘__amd64’?
+ __int64 f(__int64 n)
+ ^~~~~~~
+ __amd64
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:30:3: error: ‘__int64’ was not declared in this scope
+   __int64 n = 0;
+   ^~~~~~~
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:30:3: note: suggested alternative: ‘__amd64’
+   __int64 n = 0;
+   ^~~~~~~
+   __amd64
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:31:29: error: ‘n’ was not declared in this scope
+   return static_cast<int>(f(n));
+                             ^
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:31:27: error: ‘f’ was not declared in this scope
+   return static_cast<int>(f(n));
+                           ^
+CMakeFiles/cmTC_3d157.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_3d157.dir/kwsysPlatformTestsCXX.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_3d157.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3d157/fast' failed
+make: *** [cmTC_3d157/fast] Error 2
+
+
+Checking whether CXX compiler has environ in stdlib.h failed to compile with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_984d3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_984d3.dir/build.make CMakeFiles/cmTC_984d3.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_984d3.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/g++  -DTEST_KWSYS_CXX_HAS_ENVIRON_IN_STDLIB_H  -std=c++11 -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas -O3 -DNoRepository -ftemplate-depth-100 -fPIC      -o CMakeFiles/cmTC_984d3.dir/kwsysPlatformTestsCXX.cxx.o -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:196:13: error: ‘environ’ was not declared in this scope
+   char* e = environ[0];
+             ^~~~~~~
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:196:13: note: suggested alternative: ‘union’
+   char* e = environ[0];
+             ^~~~~~~
+             union
+CMakeFiles/cmTC_984d3.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_984d3.dir/kwsysPlatformTestsCXX.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_984d3.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_984d3/fast' failed
+make: *** [cmTC_984d3/fast] Error 2
+
+
+Checking whether CXX compiler struct stat has st_mtimespec member failed to compile with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_37dca/fast"
+/usr/bin/make -f CMakeFiles/cmTC_37dca.dir/build.make CMakeFiles/cmTC_37dca.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_37dca.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/g++  -DTEST_KWSYS_CXX_STAT_HAS_ST_MTIMESPEC  -std=c++11 -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas -O3 -DNoRepository -ftemplate-depth-100 -fPIC      -o CMakeFiles/cmTC_37dca.dir/kwsysPlatformTestsCXX.cxx.o -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:57:15: error: ‘struct stat’ has no member named ‘st_mtimespec’; did you mean ‘st_mtim’?
+   (void)stat1.st_mtimespec.tv_sec;
+               ^~~~~~~~~~~~
+               st_mtim
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:58:15: error: ‘struct stat’ has no member named ‘st_mtimespec’; did you mean ‘st_mtim’?
+   (void)stat1.st_mtimespec.tv_nsec;
+               ^~~~~~~~~~~~
+               st_mtim
+CMakeFiles/cmTC_37dca.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_37dca.dir/kwsysPlatformTestsCXX.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_37dca.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_37dca/fast' failed
+make: *** [cmTC_37dca/fast] Error 2
+
+
+Checking whether CXX compiler has _atoi64 failed to compile with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ccb1d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ccb1d.dir/build.make CMakeFiles/cmTC_ccb1d.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ccb1d.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/g++  -DTEST_KWSYS_CXX_HAS__ATOI64  -std=c++11 -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas -O3 -DNoRepository -ftemplate-depth-100 -fPIC      -o CMakeFiles/cmTC_ccb1d.dir/kwsysPlatformTestsCXX.cxx.o -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:252:27: error: ‘_atoi64’ was not declared in this scope
+   return static_cast<int>(_atoi64(str));
+                           ^~~~~~~
+/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/ParaView-v5.6.0/VTK/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:252:27: note: suggested alternative: ‘atoi’
+   return static_cast<int>(_atoi64(str));
+                           ^~~~~~~
+                           atoi
+CMakeFiles/cmTC_ccb1d.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_ccb1d.dir/kwsysPlatformTestsCXX.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_ccb1d.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/VTK/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ccb1d/fast' failed
+make: *** [cmTC_ccb1d/fast] Error 2
+
+
+Determining if the function getsockname exists in the socket failed with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bb12f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bb12f.dir/build.make CMakeFiles/cmTC_bb12f.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb12f.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -O3 -fPIC   -DCHECK_FUNCTION_EXISTS=getsockname   -o CMakeFiles/cmTC_bb12f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bb12f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb12f.dir/link.txt --verbose=1
+/usr/bin/gcc -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -O3 -fPIC   -DCHECK_FUNCTION_EXISTS=getsockname   -Wl,-lc  -Wl,-lc     -rdynamic CMakeFiles/cmTC_bb12f.dir/CheckFunctionExists.c.o  -o cmTC_bb12f -lsocket 
+/usr/bin/ld: cannot find -lsocket
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_bb12f.dir/build.make:97: recipe for target 'cmTC_bb12f' failed
+make[1]: *** [cmTC_bb12f] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bb12f/fast' failed
+make: *** [cmTC_bb12f/fast] Error 2
+
+
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wshorten64to32 failed with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_affa5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_affa5.dir/build.make CMakeFiles/cmTC_affa5.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_affa5.dir/src.cxx.o
+/usr/bin/g++    -std=c++11 -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas -O3 -DNoRepository -ftemplate-depth-100 -fPIC   -w -w -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -DCOMPILER_SUPPORT_Wshorten64to32 -Werror   -Wshorten-64-to-32 -o CMakeFiles/cmTC_affa5.dir/src.cxx.o -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp/src.cxx
+g++: error: unrecognized command line option '-Wshorten-64-to-32'
+CMakeFiles/cmTC_affa5.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_affa5.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_affa5.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_affa5/fast' failed
+make: *** [cmTC_affa5/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wenumconversion failed with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f36b5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f36b5.dir/build.make CMakeFiles/cmTC_f36b5.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f36b5.dir/src.cxx.o
+/usr/bin/g++    -std=c++11 -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas -O3 -DNoRepository -ftemplate-depth-100 -fPIC   -w -w -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -DCOMPILER_SUPPORT_Wenumconversion -Werror   -Wenum-conversion -o CMakeFiles/cmTC_f36b5.dir/src.cxx.o -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp/src.cxx
+g++: error: unrecognized command line option '-Wenum-conversion'; did you mean '-Wno-conversion'?
+CMakeFiles/cmTC_f36b5.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_f36b5.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_f36b5.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f36b5/fast' failed
+make: *** [cmTC_f36b5/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wcpp11extensions failed with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_20590/fast"
+/usr/bin/make -f CMakeFiles/cmTC_20590.dir/build.make CMakeFiles/cmTC_20590.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_20590.dir/src.cxx.o
+/usr/bin/g++    -std=c++11 -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas -O3 -DNoRepository -ftemplate-depth-100 -fPIC   -w -w -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -DCOMPILER_SUPPORT_Wcpp11extensions -Werror   -Wc++11-extensions -o CMakeFiles/cmTC_20590.dir/src.cxx.o -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp/src.cxx
+g++: error: unrecognized command line option '-Wc++11-extensions'; did you mean '-fms-extensions'?
+CMakeFiles/cmTC_20590.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_20590.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_20590.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_20590/fast' failed
+make: *** [cmTC_20590/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd981 failed with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_04bbc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_04bbc.dir/build.make CMakeFiles/cmTC_04bbc.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_04bbc.dir/src.cxx.o
+/usr/bin/g++    -std=c++11 -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas -O3 -DNoRepository -ftemplate-depth-100 -fPIC   -w -w -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_wd981 -Werror   -wd981 -o CMakeFiles/cmTC_04bbc.dir/src.cxx.o -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp/src.cxx
+g++: error: unrecognized command line option '-wd981'
+CMakeFiles/cmTC_04bbc.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_04bbc.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_04bbc.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_04bbc/fast' failed
+make: *** [cmTC_04bbc/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd2304 failed with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d5468/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d5468.dir/build.make CMakeFiles/cmTC_d5468.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d5468.dir/src.cxx.o
+/usr/bin/g++    -std=c++11 -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas -O3 -DNoRepository -ftemplate-depth-100 -fPIC   -w -w -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_wd2304 -Werror   -wd2304 -o CMakeFiles/cmTC_d5468.dir/src.cxx.o -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp/src.cxx
+g++: error: unrecognized command line option '-wd2304'
+CMakeFiles/cmTC_d5468.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_d5468.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_d5468.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d5468/fast' failed
+make: *** [cmTC_d5468/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_STRICTANSI failed with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5d719/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5d719.dir/build.make CMakeFiles/cmTC_5d719.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5d719.dir/src.cxx.o
+/usr/bin/g++    -std=c++11 -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas -O3 -DNoRepository -ftemplate-depth-100 -fPIC   -w -w -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_STRICTANSI -Werror   -strict-ansi -o CMakeFiles/cmTC_5d719.dir/src.cxx.o -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp/src.cxx
+g++: error: unrecognized command line option '-strict-ansi'; did you mean '-fstrict-enums'?
+CMakeFiles/cmTC_5d719.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_5d719.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_5d719.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5d719/fast' failed
+make: *** [cmTC_5d719/fast] Error 2
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Qunusedarguments failed with the following output:
+Change Dir: /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9cf37/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9cf37.dir/build.make CMakeFiles/cmTC_9cf37.dir/build
+make[1]: Entering directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9cf37.dir/src.cxx.o
+/usr/bin/g++    -std=c++11 -m64 -DOPENFOAM=1906 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -Wno-attributes -Wno-unknown-pragmas -O3 -DNoRepository -ftemplate-depth-100 -fPIC   -w -w -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_Qunusedarguments -Werror   -Qunused-arguments -o CMakeFiles/cmTC_9cf37.dir/src.cxx.o -c /home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp/src.cxx
+g++: error: unrecognized command line option '-Qunused-arguments'; did you mean '-Wunused-parameter'?
+CMakeFiles/cmTC_9cf37.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_9cf37.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_9cf37.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/cfd/OpenFOAM_ESI/ThirdParty-v1906/build/linux64Gcc/ParaView-5.6.0/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9cf37/fast' failed
+make: *** [cmTC_9cf37/fast] Error 2
+
+Source file was:
+int main() { return 0; }
